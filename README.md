@@ -3,7 +3,7 @@
 An ultra-lightweight (~1kb) and super easy to use plugin for parallax scrolling effect to any scrolling element.
 
 
-### Parallax scrolling effects is never been easier
+### Parallax scrolling effect is never been easier
 
 [View Demo](http://mmkjony.github.io/enllax.js/)
 
