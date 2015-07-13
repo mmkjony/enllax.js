@@ -1,5 +1,5 @@
 #Enllax.js
-=======
+
 An ultra-lightweight (~1kb) and super easy to use plugin for parallax scrolling effect to any scrolling element.
 
 ### Parallax scrolling effects is never been easier
@@ -21,7 +21,7 @@ An ultra-lightweight (~1kb) and super easy to use plugin for parallax scrolling 
 $(window).enllax();
 
 //or
-$('#some-id').enllax(); // This selector should be parent of parallax scrolling elements
+$('#some-id').enllax();  // This selector should be parent of parallax scrolling elements
 ````
 
 ### Parallax Elements:
@@ -53,9 +53,9 @@ $(window).enllax({
 //default values
 
 // type can be defined as it is background parallax scrolling element or forground scrolling element.
-type: 'background', // another value for type is 'foreground'.
+type: 'background',  // another value for type is 'foreground'.
 
-ratio: 0.5 // multiplier for scrolling speed. Less is slower.
+ratio: 0.5  // multiplier for scrolling speed. Less is slower.
 
 });
 ````
