@@ -35,7 +35,7 @@ Parallax scrolling effects can be in two types. One is background scrolling effe
 To allow background image to move with different speed, just use a data attribute with a numeric value as a multiplier for scrolling speed. Less is slower, and 1 is normal. Here's an example:
 
 ````html
-<div data-enllax-ratio=".5">...</div>
+<div data-enllax-ratio="0.5">...</div>
 ````
 
 **2. Parallax on Foreground Elements:** <br/>
