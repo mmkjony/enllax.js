@@ -41,7 +41,6 @@
             else type = options.type;
             
             var bgY = Math.round(offset * ratio);
-            
             var transform = Math.round((offset - (winHeight / 2) + height) * ratio);
             
             if(type == 'background') {
