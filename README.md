@@ -1,6 +1,6 @@
 #Enllax.js
 
-An ultra-lightweight (~1kb) and super easy to use plugin for parallax scrolling effect to any scrolling element.
+An ultra-lightweight (~1kb) and super easy to use plugin for applying parallax scrolling effect to any scrolling element.
 
 
 ### Parallax scrolling effect is never been easier
