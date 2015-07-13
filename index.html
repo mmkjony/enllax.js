@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.:: Enllax-js | Super lightweight Plugin for parallax scrolling effect ::. </title>
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+        }body {
+            font-family: 'Open Sans', sans-serif;
+            color: #444;
+            line-height: 1.4;
+            overflow-x: hidden;
+            background: url(http://subtlepatterns.com/patterns/geometry2.png);
+        }
+        header {
+            background: url(http://subtlepatterns.com/patterns/diamond_upholstery.png) #f2f2f2;
+            width: 100%;
+            padding: 100px;
+            border-bottom: 2px groove #444;
+        }header h1 {
+            font-size: 48px;
+        }header h3 {
+            font-size: 26px;
+            font-weight: 400;
+        }.fork-mmk {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }.demo {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }.text-center {
+            text-align: center;
+        }.dem1 {
+            height: 400px;
+            background-size: cover;
+            box-sizing: border-box;
+            padding: 100px;
+        }.bg1 {
+            background: url(http://www.mrwallpaper.com/wallpapers/AUtumn-Yellow-Park-1680x1050.jpg);
+        }.bg2 {
+            background: url(http://madisonmemorial.org/wp-content/uploads/2013/09/mountain-river-autumn-nature.jpg);
+        }.bg3 {
+            background: url(http://www.listofimages.com/wp-content/uploads/2012/05/nature-photography-fields-sunflowers-yellow-flowers.jpg);
+        }.bg4 {
+            background: url(http://imgscenter.com/images/2014/09/13/6-autumn-nature-sandbox-images_2053316.jpg);
+        }.box {
+            width: 90%;
+            margin: 0 auto;
+            background: #efefef;
+            padding: 100px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 1px #777;
+            margin-bottom: 15px;
+        }.b2 {
+            background: #dedede;
+        }.dl {
+            margin-top: 200px;
+            padding: 100px;
+        }
+    </style>
+    
+</head>
+<body>
+ 
+    <div id="site-wrapper">
+        
+        <header data-enllax-ratio=".5">
+            <h1>jQuery.enllax.js <small> - v1.0.0</small></h1>
+            <h3>An ultra-lightweight and super easy to use plugin for parallax scrolling effect</h3>
+        </header>
+        
+        <div class="demo">
+            <div class="text-center">
+                <h3>Here's some example</h3>
+            </div><br><br>
+            
+            <div class="dem1 bg1" data-enllax-ratio=".5"></div>
+            <div class="dem1 bg3 text-center" data-enllax-ratio=".7" style="color: #fff;">
+                <h2>With Some Texts</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nostrum voluptatem quam, ullam fugiat, sint asperiores ea necessitatibus doloremque. Enim molestias veritatis dicta. Unde id fugit facere nisi. Omnis, quia.</p>
+            </div>
+            <div class="dem1 bg4" data-enllax-ratio="1.5">
+                <h1 class="text-center" style="color: #fff" data-enllax-ratio=".3" data-enllax-type="foreground">Moving Fast</h1>
+            </div><br><br><br>
+        </div>
+        
+        <div class="demo">
+            <div class="text-center">
+                <h3>Here's some foreground parallax</h3>
+            </div>
+            <br><br>
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore doloremque libero, asperiores perspiciatis, nulla fuga hic expedita fugit veritatis iure natus deserunt aliquam et atque inventore quae soluta laudantium omnis illum corrupti ullam officiis. Voluptates, nemo veniam laudantium sed magnam, distinctio consequatur, ipsum, nulla expedita voluptate labore. Animi, porro, officia?
+            </div>
+            
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio=".9" data-enllax-type="foreground" style="z-index:99">
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="1.5" data-enllax-type="foreground" style="z-index:99">
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio=".3" data-enllax-type="foreground" style="z-index:99">
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-1.4" data-enllax-type="foreground" style="z-index:99">
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-.5" data-enllax-type="foreground" style="z-index:99">
+
+            <div class="box b2 text-center" data-enllax-ratio="-.3" data-enllax-type="foreground">
+               
+               <h2>Moving Box</h2><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nemo, labore quaerat! Sit fugit explicabo veniam unde molestias nemo, natus nostrum, voluptate eaque. Consectetur nesciunt magnam molestias velit minus cum!
+            </div>
+            
+            <div class="box">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nemo, labore quaerat! Sit fugit explicabo veniam unde molestias nemo, natus nostrum, voluptate eaque. Consectetur nesciunt magnam molestias velit minus cum!
+            </div>
+            
+        </div>
+        
+        <div class="dl">
+            
+        </div>
+        
+        
+        
+        
+        
+        <!-- Fork Me -->
+        <a class="fork-mmk" href="https://github.com/mmkjony/enllax.js" target="_blank">
+            <img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+        </a>
+        
+    </div> <!--/ #site-wrapper -->
+  
+  
+  
+   
+   
+   
+   <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="jquery.enllax.min.js"></script>
+    <script>
+
+        (function($){
+            
+            //Plugin activation
+            $(window).enllax();
+            
+//            $('#some-id').enllax();
+            
+//            $('selector').enllax({
+//                type: 'background', // 'foreground'
+//                ratio: 0.5
+//            });
+            
+        })(jQuery);
+
+    </script>
+    
+</body>
+</html>
