@@ -2,13 +2,14 @@
 
 An ultra-lightweight (~1kb) and super easy to use plugin for parallax scrolling effect to any scrolling element.
 
+
 ### Parallax scrolling effects is never been easier
 
-------
 [View Demo](http://mmkjony.github.io/enllax.js/)
 
+
 ## How to Use:
-------
+
 **1. At first include [jQuery](http://jquery.com/download/) and jquery.enllax.js**
 ````html
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
