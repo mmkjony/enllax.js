@@ -1,5 +1,5 @@
 /**
-  * jQuery.enllax.js v1.0.0
+  * jQuery.enllax.js v1.0.1
   * https://github.com/mmkjony/enllax.js
   * demo: http://mmkjony.github.io/enllax.js/
   *
@@ -13,6 +13,7 @@
     $.fn.enllax = function(opt){
         
         var winHeight = $(window).height();
+        var docHeight = $(document).height();
         
         var options = $.extend({
             ratio: 0.5,
@@ -67,7 +68,7 @@
                         'background-position': 'center ' + -bgY + 'px'
                     });
                 }
-                else if(type == 'foreground') {
+                else if((type == 'foreground') && (scrolling < docHeight)) {
                     $this.css({
                         '-webkit-transform': 'translateY(' + transform + 'px)',
                         '-moz-transform': 'translateY(' + transform + 'px)',
