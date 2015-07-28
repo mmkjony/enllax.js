@@ -3,7 +3,7 @@
   * https://github.com/mmkjony/enllax.js
   * demo: http://mmkjony.github.io/enllax.js/
   *
-  * Copyright 2015, MMK Jony
+  * Copyright © 2015, MMK Jony
   * This content is released under the MIT license
  **/
 
