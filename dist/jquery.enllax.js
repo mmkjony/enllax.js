@@ -13,6 +13,7 @@
     $.fn.enllax = function(opt){
         
         var winHeight = $(window).height();
+        var docHeight = $(document).height();
         
         var options = $.extend({
             ratio: 0.5,
@@ -60,7 +61,6 @@
                 var scrolling = $(this).scrollTop();
                 
                 bgY = Math.round((offset - scrolling) * ratio);
-                
                 transform = Math.round(((offset - (winHeight / 2) + height) - scrolling) * ratio);
                 
                 if(type == 'background') {
@@ -68,7 +68,7 @@
                         'background-position': 'center ' + -bgY + 'px'
                     });
                 }
-                else if(type == 'foreground') {
+                else if((type == 'foreground') && (scrolling < docHeight)) {
                     $this.css({
                         '-webkit-transform': 'translateY(' + transform + 'px)',
                         '-moz-transform': 'translateY(' + transform + 'px)',
