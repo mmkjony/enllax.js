@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en-us">
+  <head>
     <meta charset="UTF-8">
-    <title>.:: Enllax-js | Super lightweight Plugin for parallax scrolling effect ::. </title>
-    
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet">
+    <title>Enllax.js | a plugin for parallax scrolling effect by MMK Jony</title>
+    <meta name="author" content="MMK Jony">
+    <meta name="description" content="An ultra-lightweight and super easy to use plugin for parallax scrolling effect">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-        }body {
+      body {
             font-family: 'Open Sans', sans-serif;
             color: #444;
             line-height: 1.4;
             overflow-x: hidden;
             background: url(http://subtlepatterns.com/patterns/geometry2.png);
         }
-        header {
-            background: url(http://subtlepatterns.com/patterns/diamond_upholstery.png) #f2f2f2;
-            width: 100%;
-            padding: 100px;
-            border-bottom: 2px groove #444;
-        }header h1 {
-            font-size: 48px;
-        }header h3 {
-            font-size: 26px;
-            font-weight: 400;
-        }.fork-mmk {
-            position: fixed;
-            top: 0px;
-            right: 0px;
-        }.demo {
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }.text-center {
+        .text-center {
             text-align: center;
-        }.dem1 {
+        }
+        .p50 {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        .dem1 {
             height: 400px;
             background-size: cover;
             box-sizing: border-box;
@@ -65,36 +53,42 @@
             margin-top: 200px;
             padding: 100px;
         }
+        .fork-mmk {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+        }
     </style>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Enllax.js</h1>
+      <h2 class="project-tagline">Enllax is an ultra-lightweight (~1kb) and super easy to use plugin for parallax scrolling effect.</h2>
+      <a href="https://github.com/mmkjony/enllax.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/mmkjony/enllax.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mmkjony/enllax.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
     
-</head>
-<body>
- 
-    <div id="site-wrapper">
-        
-        <header data-enllax-ratio=".5">
-            <h1>jQuery.enllax.js <small> - v1.0.0</small></h1>
-            <h3>An ultra-lightweight and super easy to use plugin for parallax scrolling effect</h3>
-        </header>
-        
-        <div class="demo">
-            <div class="text-center">
-                <h3>Here's some example</h3>
-            </div><br><br>
-            
-            <div class="dem1 bg1" data-enllax-ratio=".5"></div>
+    <section class="main-content">
+      <div class="text-center">
+        <h3>Here are some example</h3>
+      </div>
+    </section>
+    
+    <div class="p50">
+      <div class="dem1 bg1" data-enllax-ratio=".5"></div>
             <div class="dem1 bg3 text-center" data-enllax-ratio=".7" style="color: #fff;">
                 <h2>With Some Texts</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nostrum voluptatem quam, ullam fugiat, sint asperiores ea necessitatibus doloremque. Enim molestias veritatis dicta. Unde id fugit facere nisi. Omnis, quia.</p>
             </div>
             <div class="dem1 bg4" data-enllax-ratio="1.5">
                 <h1 class="text-center" style="color: #fff" data-enllax-ratio=".3" data-enllax-type="foreground">Moving Fast</h1>
-            </div><br><br><br>
-        </div>
-        
-        <div class="demo">
+            </div>
+    </div>
+    
+    <div class="demo">
             <div class="text-center">
-                <h3>Here's some foreground parallax</h3>
+                <h3>Here are some foreground parallax</h3>
             </div>
             <br><br>
             <div class="box">
@@ -104,9 +98,10 @@
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio=".9" data-enllax-type="foreground" style="z-index:99">
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="1.5" data-enllax-type="foreground" style="z-index:99">
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio=".3" data-enllax-type="foreground" style="z-index:99">
-            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-1.4" data-enllax-type="foreground" style="z-index:99">
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-1.3" data-enllax-type="foreground" style="z-index:99">
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-.5" data-enllax-type="foreground" style="z-index:99">
 
+            
             <div class="box b2 text-center" data-enllax-ratio="-.3" data-enllax-type="foreground">
                
                <h2>Moving Box</h2><br>
@@ -119,27 +114,25 @@
             
         </div>
         
-        <div class="dl">
-            
-        </div>
-        
-        
-        
-        
-        
-        <!-- Fork Me -->
+        <div class="dl"></div>
+
+    <section class="main-content">
+      
+      <footer class="site-footer">
+        <span class="site-footer-owner">Copyright &copy; 2015, <a href="https://github.com/mmkjony">MMK Jony</a>.</span>
+
+        <span class="site-footer-credits"></span>
+      </footer>
+
+    </section>
+    
+    <!-- Fork Me -->
         <a class="fork-mmk" href="https://github.com/mmkjony/enllax.js" target="_blank">
             <img src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
         </a>
-        
-    </div> <!--/ #site-wrapper -->
-  
-  
-  
-   
-   
-   
-   <!-- Scripts -->
+
+
+<!-- Scripts -->
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="jquery.enllax.min.js"></script>
     <script>
@@ -158,7 +151,10 @@
             
         })(jQuery);
 
+
+
     </script>
-    
-</body>
+  
+  </body>
 </html>
+
