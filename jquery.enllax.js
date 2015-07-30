@@ -1,9 +1,9 @@
 /**
-  * jQuery.enllax.js v1.0.1
+  * jQuery.enllax.js v1.1.0
   * https://github.com/mmkjony/enllax.js
   * demo: http://mmkjony.github.io/enllax.js/
   *
-  * Copyright © 2015, MMK Jony
+  * Copyright 2015, MMK Jony
   * This content is released under the MIT license
  **/
 
@@ -17,7 +17,8 @@
         
         var options = $.extend({
             ratio: 0.5,
-            type: 'background' //foreground
+            type: 'background', //foreground
+            direction: 'vertical' //horizontal
         }, opt);
         
         var elem = $('[data-enllax-ratio]');
@@ -25,36 +26,59 @@
         elem.each(function(){
             var ratio;
             var type;
+            var dir;
             var $this = $(this);
             var offset = $this.offset().top;
             var height = $this.outerHeight();
             var dataRat = $this.data('enllax-ratio');
             var dataType = $this.data('enllax-type');
+            var dataDir = $this.data('enllax-direction');
             
             if(dataRat) {
                 ratio = dataRat;
             }
-            else ratio = options.ratio;
+            else { ratio = options.ratio; }
             
             if(dataType) {
                 type = dataType;
             }
-            else type = options.type;
+            else { type = options.type; }
+            
+            if(dataDir) {
+                dir = dataDir;
+            }
+            else { dir = options.direction; }
             
             var bgY = Math.round(offset * ratio);
             var transform = Math.round((offset - (winHeight / 2) + height) * ratio);
             
             if(type == 'background') {
-                $this.css({
-                    'background-position': 'center ' + -bgY + 'px'
-                });
+                if(dir == 'vertical') {
+                    $this.css({
+                        'background-position': 'center ' + -bgY + 'px'
+                    });
+                }
+                else if(dir == 'horizontal') {
+                    $this.css({
+                        'background-position': -bgY + 'px' + ' center'
+                    });
+                }
             }
             else if(type == 'foreground') {
-                $this.css({
-                    '-webkit-transform': 'translateY(' + transform + 'px)',
-                    '-moz-transform': 'translateY(' + transform + 'px)',
-                    'transform': 'translateY(' + transform + 'px)'
-                });
+                if(dir == 'vertical') {
+                    $this.css({
+                        '-webkit-transform': 'translateY(' + transform + 'px)',
+                        '-moz-transform': 'translateY(' + transform + 'px)',
+                        'transform': 'translateY(' + transform + 'px)'
+                    });
+                }
+                else if(dir == 'horizontal') {
+                    $this.css({
+                        '-webkit-transform': 'translateX(' + transform + 'px)',
+                        '-moz-transform': 'translateX(' + transform + 'px)',
+                        'transform': 'translateX(' + transform + 'px)'
+                    });
+                }
             }
             
             $(window).on('scroll', function(){
@@ -64,16 +88,32 @@
                 transform = Math.round(((offset - (winHeight / 2) + height) - scrolling) * ratio);
                 
                 if(type == 'background') {
-                    $this.css({
-                        'background-position': 'center ' + -bgY + 'px'
-                    });
+                    if(dir == 'vertical') {
+                        $this.css({
+                            'background-position': 'center ' + -bgY + 'px'
+                        });
+                    }
+                    else if(dir == 'horizontal') {
+                        $this.css({
+                            'background-position': -bgY + 'px' + ' center'
+                        });
+                    }
                 }
                 else if((type == 'foreground') && (scrolling < docHeight)) {
-                    $this.css({
-                        '-webkit-transform': 'translateY(' + transform + 'px)',
-                        '-moz-transform': 'translateY(' + transform + 'px)',
-                        'transform': 'translateY(' + transform + 'px)'
-                    });
+                    if(dir == 'vertical') {
+                        $this.css({
+                            '-webkit-transform': 'translateY(' + transform + 'px)',
+                            '-moz-transform': 'translateY(' + transform + 'px)',
+                            'transform': 'translateY(' + transform + 'px)'
+                        });
+                    }
+                    else if(dir == 'horizontal') {
+                        $this.css({
+                            '-webkit-transform': 'translateX(' + transform + 'px)',
+                            '-moz-transform': 'translateX(' + transform + 'px)',
+                            'transform': 'translateX(' + transform + 'px)'
+                        });
+                    }
                 }
             });
         });
