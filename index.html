@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <style>
+        * { margin: 0; padding: 0; }
       body {
             font-family: 'Open Sans', sans-serif;
             color: #444;
@@ -57,6 +58,7 @@
             position: fixed;
             top: 0px;
             right: 0px;
+            z-index: 99999;
         }
     </style>
   </head>
@@ -76,10 +78,12 @@
     </section>
     
     <div class="p50">
-      <div class="dem1 bg1" data-enllax-ratio=".5"></div>
-            <div class="dem1 bg3 text-center" data-enllax-ratio=".7" style="color: #fff;">
+      <div class="dem1 bg1" data-enllax-ratio=".5" data-enllax-direction="horizontal"></div>
+            <div class="dem1 bg3 text-center" data-enllax-ratio=".7" style="color: #fff;" >
                 <h2>With Some Texts</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nostrum voluptatem quam, ullam fugiat, sint asperiores ea necessitatibus doloremque. Enim molestias veritatis dicta. Unde id fugit facere nisi. Omnis, quia.</p>
+                
+                <h1 data-enllax-ratio=".5" data-enllax-type="foreground" data-enllax-direction="horizontal">And this is moving horizontally</h1>
             </div>
             <div class="dem1 bg4" data-enllax-ratio="1.5">
                 <h1 class="text-center" style="color: #fff" data-enllax-ratio=".3" data-enllax-type="foreground">Moving Fast</h1>
@@ -88,7 +92,7 @@
     
     <div class="demo">
             <div class="text-center">
-                <h3>Here are some foreground parallax</h3>
+                <h2 data-enllax-ratio="-.5" data-enllax-type="foreground" data-enllax-direction="horizontal">Here are some foreground parallax</h2>
             </div>
             <br><br>
             <div class="box">
@@ -98,7 +102,7 @@
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio=".9" data-enllax-type="foreground" style="z-index:99">
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="1.5" data-enllax-type="foreground" style="z-index:99">
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio=".3" data-enllax-type="foreground" style="z-index:99">
-            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-1.3" data-enllax-type="foreground" style="z-index:99">
+            <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-1.3" data-enllax-type="foreground"  style="z-index:99">
             <img src="http://png-3.findicons.com/files/icons/364/fun/256/balloon.png" alt="" data-enllax-ratio="-.5" data-enllax-type="foreground" style="z-index:99">
 
             
