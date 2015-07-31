@@ -1,4 +1,4 @@
-#Enllax.js
+#Enllax.js : jQuery Parallax Scrolling Effect
 
 An ultra-lightweight (~1kb) and super easy to use plugin for applying parallax scrolling effect to any scrolling element. You can set parallax scrolling effects to both foreground and background elements, and also in both directions (vertically or horizontally).
 
