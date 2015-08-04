@@ -16,7 +16,7 @@
         var docHeight = $(document).height();
         
         var options = $.extend({
-            ratio: 0.5,
+            ratio: 0,
             type: 'background', //foreground
             direction: 'vertical' //horizontal
         }, opt);
