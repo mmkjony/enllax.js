@@ -9,49 +9,65 @@
 
 (function($){
     'use strict';
-    
+
     $.fn.enllax = function(opt){
-        
+
+        var elem = $('[data-enllax-ratio]');
+        elem.each(function(){
+            var $this = $(this);
+            $this.css({
+                'position': 'absolute',
+                'left': '0',
+                'right': '0'
+            });
+        });
+
         var winHeight = $(window).height();
-        var docHeight = $(document).height();
-        
+
         var options = $.extend({
             ratio: 0,
             type: 'background', //foreground
-            direction: 'vertical' //horizontal
+            direction: 'vertical', //horizontal
+            offset: 0
         }, opt);
-        
-        var elem = $('[data-enllax-ratio]');
-        
+
         elem.each(function(){
             var ratio;
             var type;
             var dir;
+            var offset;
             var $this = $(this);
-            var offset = $this.offset().top;
+            var docHeight = $(document).height();
+            var offsettop = $this.offset().top;
             var height = $this.outerHeight();
             var dataRat = $this.data('enllax-ratio');
             var dataType = $this.data('enllax-type');
             var dataDir = $this.data('enllax-direction');
-            
+            var dataOffset = $this.data('enllax-offset');
+
             if(dataRat) {
                 ratio = dataRat;
             }
             else { ratio = options.ratio; }
-            
+
             if(dataType) {
                 type = dataType;
             }
             else { type = options.type; }
-            
+
             if(dataDir) {
                 dir = dataDir;
             }
             else { dir = options.direction; }
-            
-            var bgY = Math.round(offset * ratio);
-            var transform = Math.round((offset - (winHeight / 2) + height) * ratio);
-            
+
+            if(dataOffset) {
+                offset = dataOffset;
+            }
+            else { offset = options.offset; }
+
+            var bgY = Math.round(offsettop * ratio);
+            var transform = Math.round( ( offsettop - ( winHeight / 2 ) ) * ratio - offset );
+
             if(type == 'background') {
                 if(dir == 'vertical') {
                     $this.css({
@@ -69,7 +85,10 @@
                     $this.css({
                         '-webkit-transform': 'translateY(' + transform + 'px)',
                         '-moz-transform': 'translateY(' + transform + 'px)',
-                        'transform': 'translateY(' + transform + 'px)'
+                        'transform': 'translateY(' + transform + 'px)',
+                        'position': 'absolute',
+                        'left': '0',
+                        'right': '0'
                     });
                 }
                 else if(dir == 'horizontal') {
@@ -80,13 +99,16 @@
                     });
                 }
             }
-            
+
             $(window).on('scroll', function(){
+                var docHeight = $(document).height();
+                var offsettop = $this.offset().top;
+                var height = $this.outerHeight();
                 var scrolling = $(this).scrollTop();
-                
-                bgY = Math.round((offset - scrolling) * ratio);
-                transform = Math.round(((offset - (winHeight / 2) + height) - scrolling) * ratio);
-                
+
+                bgY = Math.round((offsettop - scrolling) * ratio);
+                transform = Math.round( ( ( offsettop - ( winHeight / 2 ) ) - scrolling ) * ratio - offset );
+
                 if(type == 'background') {
                     if(dir == 'vertical') {
                         $this.css({
@@ -104,7 +126,10 @@
                         $this.css({
                             '-webkit-transform': 'translateY(' + transform + 'px)',
                             '-moz-transform': 'translateY(' + transform + 'px)',
-                            'transform': 'translateY(' + transform + 'px)'
+                            'transform': 'translateY(' + transform + 'px)',
+                            'position': 'absolute',
+                            'left': '0',
+                            'right': '0'
                         });
                     }
                     else if(dir == 'horizontal') {
@@ -117,7 +142,7 @@
                 }
             });
         });
-        
+
     };
-    
+
 })(jQuery);
